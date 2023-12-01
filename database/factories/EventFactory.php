@@ -22,15 +22,18 @@ class EventFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(3),
+            'user_id' =>$this->faker->numberBetween(1, 3),
+            'name' => $this->faker->words(2, true),
             'description' => $this->faker->paragraph(3),
-            'img_url' => $this->faker->imageUrl(),
-            'hold_date' => $this->faker->dateTimeBetween('+1 week', '+1 year'),
+            'main_img_url' => 'https://random.imagecdn.app/300/200',
+            'sub_img_url_one' => 'https://random.imagecdn.app/300/200',
+            'sub_img_url_two' => 'https://random.imagecdn.app/300/200',
+            'sub_img_url_three' => 'https://random.imagecdn.app/300/200',
+            'sub_img_url_four' => 'https://random.imagecdn.app/300/200',
+            'hold_date' => $this->faker->dateTimeBetween('-1 year', '+1 year')->format('Y-m-d H:i:s'),
             'premium_ticket_price' => $this->faker->randomFloat(2, 10, 100),
             'normal_ticket_price' => $this->faker->randomFloat(2, 5, 50),
-            'venue' => $this->faker->address,
-            'created_at' => now(),
-            'updated_at' => now(),
+            'venue' => $this->faker->address
         ];
     }
 }

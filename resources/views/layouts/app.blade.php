@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -76,5 +77,9 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+
+    @yield('js')
 </body>
 </html>

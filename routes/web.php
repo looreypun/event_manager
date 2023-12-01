@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Front\EventController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\Front\EventController::class, 'index'])->name('front');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('event', \App\Http\Controllers\Admin\EventController::class);
+});

@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->string('name');
-            $table->text('description');
-            $table->string('img_url');
-            $table->date('hold_date');
-            $table->decimal('premium_ticket_price', 10, 2);
+            $table->text('description')->nullable();
+            $table->string('main_img_url')->nullable();
+            $table->string('sub_img_url_one')->nullable();
+            $table->string('sub_img_url_two')->nullable();
+            $table->string('sub_img_url_three')->nullable();
+            $table->string('sub_img_url_four')->nullable();
+            $table->dateTime('hold_date');
+            $table->decimal('premium_ticket_price', 10, 2)->nullable();
             $table->decimal('normal_ticket_price', 10, 2);
             $table->string('venue');
             $table->timestamps();

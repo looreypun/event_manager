@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
@@ -14,8 +15,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::with('rlSubImage')->get();
+        $events = Event::where('hold_date', '>=', Carbon::now())->get();
 
-        return view('welcome', compact('events'));
+        return view('front.event.index', compact('events'));
     }
 }

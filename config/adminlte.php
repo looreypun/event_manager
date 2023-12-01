@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -307,12 +307,10 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => [
-                'manage-blog',
-                'superuser'
-            ],
+            'text' => 'Events',
+            'url'  => 'event',
+            'icon'        => 'far fa-fw fa-calendar',
+            'label_color' => 'success',
         ],
 //        [
 //            'text'        => 'pages',
