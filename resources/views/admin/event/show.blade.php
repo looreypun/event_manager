@@ -26,7 +26,7 @@
                             <input name="image-main" type="file" id="main-image-input" accept="image/*" style="display: none" onchange="previewImage(event, 'main-image')">
                             <label for="main-image-input">
                                 <div class="image-wrapper border rounded">
-                                    <img id="main-image" class="rounded w-100" src="{{ $event->main_img_url?? asset('storage/images/events/upload_icon.png') }}" role="button">
+                                    <img id="main-image" class="rounded w-100" src="{{ $event->main_img_url?? asset('images/upload_icon.png') }}" role="button">
                                 </div>
                             </label>
                             <h5 class="text-secondary text-bold">Secondary Image</h5>
@@ -35,7 +35,7 @@
                                     <input name="image-sub-one" type="file" id="sub-image-input-one" accept="image/*" style="display: none;" onchange="previewImage(event, 'sub-image-one')">
                                     <label for="sub-image-input-one">
                                         <div class="image-wrapper border rounded">
-                                            <img id="sub-image-one" class="w-100 rounded" src="{{ $event->sub_img_url_one?? asset('storage/images/events/upload_icon.png') }}" role="button")>
+                                            <img id="sub-image-one" class="w-100 rounded" src="{{ $event->sub_img_url_one?? asset('images/upload_icon.png') }}" role="button")>
                                         </div>
                                     </label>
                                 </div>
@@ -43,7 +43,7 @@
                                     <input name="image-sub-two" type="file" id="sub-image-input-two" accept="image/*" style="display: none;" onchange="previewImage(event, 'sub-image-two')">
                                     <label for="sub-image-input-two">
                                         <div class="image-wrapper border rounded">
-                                            <img id="sub-image-two" class="w-100 rounded" src="{{ $event->sub_img_url_two?? asset('storage/images/events/upload_icon.png') }}" role="button">
+                                            <img id="sub-image-two" class="w-100 rounded" src="{{ $event->sub_img_url_two?? asset('images/upload_icon.png') }}" role="button">
                                         </div>
                                     </label>
                                 </div>
@@ -51,7 +51,7 @@
                                     <input name="image-sub-three" type="file" id="sub-image-input-three" accept="image/*" style="display: none;" onchange="previewImage(event, 'sub-image-three')">
                                     <label for="sub-image-input-three">
                                         <div class="image-wrapper border rounded">
-                                            <img id="sub-image-three" class="w-100 rounded" src="{{ $event->sub_img_url_three?? asset('storage/images/events/upload_icon.png') }}" role="button">
+                                            <img id="sub-image-three" class="w-100 rounded" src="{{ $event->sub_img_url_three?? asset('images/upload_icon.png') }}" role="button">
                                         </div>
                                     </label>
                                 </div>
@@ -59,7 +59,7 @@
                                     <input name="image-sub-four" type="file" id="sub-image-input-four" accept="image/*" style="display: none;" onchange="previewImage(event, 'sub-image-four')">
                                     <label for="sub-image-input-four">
                                         <div class="image-wrapper border rounded">
-                                            <img id="sub-image-four" class="w-100 rounded" src="{{ $event->sub_img_url_four?? asset('storage/images/events/upload_icon.png') }}" role="button">
+                                            <img id="sub-image-four" class="w-100 rounded" src="{{ $event->sub_img_url_four?? asset('images/upload_icon.png') }}" role="button">
                                         </div>
                                     </label>
                                 </div>
